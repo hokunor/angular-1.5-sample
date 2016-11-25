@@ -1,0 +1,10 @@
+.music {
+  position: relative;
+  min-height: 400px;
+  width: 700px;
+  z-index: 1;
+  .cover {
+    width: 200px;
+    height: 200px;
+  }
+}

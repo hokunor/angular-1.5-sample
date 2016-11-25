@@ -1,0 +1,19 @@
+<div class="music">
+  <table ng-table="$ctrl.tableParams" show-filter="true" class="table table-condensed table-bordered">
+      <loader loaded="$ctrl.loaded"></loader>
+      <tr ng-repeat="row in $data">
+        <td data-title="'Cover'" header-class="'text-left'"">
+          <img class="cover" src="{{row.albumCover}}"/>
+        </td>
+        <td data-title="'Title'" header-class="'text-right'" sortable="'albumTitle'" filter="{ 'albumTitle': 'text' }">
+            {{row.albumTitle}}
+        </td>
+        <td data-title="'Artist'" header-class="'text-right'" sortable="'artist'" filter="{ 'artist': 'text' }">
+            {{row.artist}}
+        </td>
+        <td data-title="'Production'" header-class="'text-right'" sortable="'production'" filter="{ 'production': 'text' }">
+            {{ row.production | date:'dd-MM-yyyy'}}
+        </td>
+      </tr>
+    </table>
+  </div>
